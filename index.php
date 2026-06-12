@@ -3,46 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>แม่สูตรคูณ For Loop</title>
-
-
-
-</head>
-
-<body>
-
-<div class="container">
-
-    <h2>โปรแกรมคำนวณสูตรคูณ (For Loop)</h2>
-
-    <div class="menu">
-        <a href="for.php">For Loop</a>
-        <a href="while.php">While Loop</a>
-    </div>
-
-    <form method="get">
-        กรอกแม่สูตรคูณ
-        <input type="number" name="num" required>
-
-        <input type="submit" value="คำนวณ">
-    </form>
-
-    <?php
-    if(isset($_GET['num'])){
-        $num = $_GET['num'];
-
-        echo "<div class='result'>";
-        echo "<h3>สูตรคูณแม่ $num</h3>";
-
-        for($i=1; $i<=12; $i++){
-            echo "$num × $i = ".($num*$i)."<br>";
-        }
-
-        echo "</div>";
-    }
-    ?>
-
-</div>
-
 <style>
 body{
     background:#f4f6f9;
@@ -85,6 +45,7 @@ input[type=number]{
     width:100%;
     padding:10px;
     margin:10px 0;
+    box-sizing: border-box;
 }
 
 input[type=submit]{
@@ -104,6 +65,46 @@ input[type=submit]{
     border-radius:5px;
 }
 </style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>โปรแกรมคำนวณสูตรคูณ (For Loop)</h2>
+
+    <div class="menu">
+        <a href="index.php">For Loop</a>
+        <a href="while.php">While Loop</a>
+    </div>
+
+    <form method="get">
+        กรอกแม่สูตรคูณ
+        <input type="number" name="num" required>
+
+        <input type="submit" value="คำนวณ">
+    </form>
+
+    <?php
+    if(isset($_GET['num'])){
+        $num = $_GET['num'];
+
+        echo "<div class='result'>";
+        echo "<h3>สูตรคูณแม่ $num</h3>";
+
+        for($i=1; $i<=12; $i++){
+            echo "$num × $i = ".($num * $i)."<br>";
+        }
+
+        echo "</div>";
+    }
+    ?>
+
+</div>
+
+
 
 </body>
 </html>
